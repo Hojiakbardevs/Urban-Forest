@@ -167,9 +167,9 @@ const Home: React.FC = () => {
               Rejalashtiring va kuchaytiring
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Bizning keng zamonaviy platformamiz shahar va o‘rmonchilik loyihalarini
-              rejalashtirish, tahlil qilish va vizualizatsiya qilish uchun zarur
-              bo‘lgan barcha funksiyalarni taqdim etadi.
+              Bizning keng zamonaviy platformamiz shahar va o‘rmonchilik
+              loyihalarini rejalashtirish, tahlil qilish va vizualizatsiya
+              qilish uchun zarur bo‘lgan barcha funksiyalarni taqdim etadi.
             </p>
           </div>
 
@@ -188,7 +188,9 @@ const Home: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 text-center">{feature.description}</p>
+                <p className="text-gray-600 text-center">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -207,11 +209,11 @@ const Home: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your City?
+              Shahringizni o‘zgartirishga tayyormisiz?
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-              Join the movement towards sustainable urban development. Start
-              planning your green spaces today.
+              Barqaror urban rivojlanish sari harakatga qo‘shiling. Yashil
+              hududlaringizni rejalashtirishni bugunoq boshlang!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -219,14 +221,14 @@ const Home: React.FC = () => {
                 to="/area"
                 className="bg-white hover:bg-gray-100 text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
                 <Calculator className="w-5 h-5" />
-                <span>Start Planning</span>
+                <span>Rejalashtirishni boshlang</span>
               </Link>
 
               <Link
                 to="/contact"
                 className="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border-2 border-white transition-colors flex items-center justify-center space-x-2">
                 <Users className="w-5 h-5" />
-                <span>Get in Touch</span>
+                <span>Bog‘lanish</span>
               </Link>
             </div>
           </motion.div>

@@ -1,5 +1,5 @@
-import React from 'react';
-import { TreePine, Github, Mail, MapPin } from 'lucide-react';
+import React from "react";
+import { TreePine, Github, Mail, MapPin } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -12,25 +12,23 @@ const Footer: React.FC = () => {
               <div className="bg-gradient-to-r from-green-600 to-blue-600 p-2 rounded-lg">
                 <TreePine className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold">Urban Forest Visualizer</span>
+              <span className="text-xl font-bold">HeatMap Ai Visualizer</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Empowering sustainable urban development through intelligent tree planting 
-              visualization and environmental impact analysis for Tashkent and beyond.
+              Barqaror shahar rivojlanishini qo‘llab-quvvatlash uchun aqlli
+              daraxt ekish vizualizatsiyasi va atrof-muhitga ta’sir tahlili.
             </p>
             <div className="flex space-x-4">
               <a
                 href="https://github.com"
                 className="text-gray-400 hover:text-white transition-colors"
-                aria-label="GitHub"
-              >
+                aria-label="GitHub">
                 <Github className="w-5 h-5" />
               </a>
               <a
                 href="mailto:contact@urbanforest.uz"
                 className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Email"
-              >
+                aria-label="Email">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -38,21 +36,27 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Tezkor havolalar</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/area" className="text-gray-300 hover:text-white transition-colors">
-                  Area Analysis
+                <a
+                  href="/area"
+                  className="text-gray-300 hover:text-white transition-colors">
+                  Hudud tahlili
                 </a>
               </li>
               <li>
-                <a href="/simulation" className="text-gray-300 hover:text-white transition-colors">
-                  Growth Simulation
+                <a
+                  href="/simulation"
+                  className="text-gray-300 hover:text-white transition-colors">
+                  O‘sish simulyatsiyasi
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact Us
+                <a
+                  href="/contact"
+                  className="text-gray-300 hover:text-white transition-colors">
+                  Biz bilan bog‘lanish
                 </a>
               </li>
             </ul>
@@ -60,11 +64,11 @@ const Footer: React.FC = () => {
 
           {/* Location */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Location</h3>
+            <h3 className="text-lg font-semibold mb-4">Manzil</h3>
             <div className="flex items-start space-x-2 text-gray-300">
               <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
               <div>
-                <p>Tashkent, Uzbekistan</p>
+                <p>Toshkent, O‘zbekiston</p>
                 <p className="text-sm">41.31°N, 69.25°E</p>
               </div>
             </div>
@@ -73,17 +77,23 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Urban Forest Visualizer. All rights reserved.
+            © 2024 Urban Forest Visualizer. Barcha huquqlar himoyalangan.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Privacy Policy
+            <a
+              href="#"
+              className="text-gray-400 hover:text-white text-sm transition-colors">
+              Maxfiylik siyosati
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Terms of Service
+            <a
+              href="#"
+              className="text-gray-400 hover:text-white text-sm transition-colors">
+              Foydalanish shartlari
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Accessibility
+            <a
+              href="#"
+              className="text-gray-400 hover:text-white text-sm transition-colors">
+              Imkoniyati cheklanganlar uchun
             </a>
           </div>
         </div>

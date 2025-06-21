@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { TreePine, Menu, X, MapPin } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { TreePine, Menu, X, MapPin } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/area', label: 'Area Analysis' },
-    { path: '/simulation', label: 'Growth Simulation' },
-    { path: '/contact', label: 'Contact' }
+    { path: "/", label: "Bosh sahifa" },
+    { path: "/area", label: "Hudud tahlili" },
+    { path: "/simulation", label: "O‘sish simulyatsiyasi" },
+    { path: "/contact", label: "Bog‘lanish" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -26,10 +26,10 @@ const Navigation: React.FC = () => {
               <TreePine className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl font-bold text-gray-900 hidden sm:block">
-              Urban Forest Visualizer
+              HeatMap Ai Visualizer
             </span>
             <span className="text-lg font-bold text-gray-900 sm:hidden">
-              UFV
+              HeatAi
             </span>
           </Link>
 
@@ -41,10 +41,9 @@ const Navigation: React.FC = () => {
                 to={item.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors relative ${
                   isActive(item.path)
-                    ? 'text-green-600'
-                    : 'text-gray-700 hover:text-green-600'
-                }`}
-              >
+                    ? "text-green-600"
+                    : "text-gray-700 hover:text-green-600"
+                }`}>
                 {item.label}
                 {isActive(item.path) && (
                   <motion.div
@@ -56,14 +55,13 @@ const Navigation: React.FC = () => {
                 )}
               </Link>
             ))}
-            
+
             {/* Skip to Map Button */}
             <Link
               to="/area#map"
-              className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center space-x-1"
-            >
+              className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center space-x-1">
               <MapPin className="w-4 h-4" />
-              <span>Skip to Map</span>
+              <span>Xaritaga o‘tish</span>
             </Link>
           </div>
 
@@ -71,9 +69,12 @@ const Navigation: React.FC = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-md text-gray-700 hover:text-green-600 hover:bg-gray-100 transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            aria-label="Toggle menu">
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
@@ -83,10 +84,9 @@ const Navigation: React.FC = () => {
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-200"
-          >
+            className="md:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-2 space-y-1">
               {navItems.map((item) => (
                 <Link
@@ -95,19 +95,17 @@ const Navigation: React.FC = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     isActive(item.path)
-                      ? 'text-green-600 bg-green-50'
-                      : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
-                  }`}
-                >
+                      ? "text-green-600 bg-green-50"
+                      : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
+                  }`}>
                   {item.label}
                 </Link>
               ))}
               <Link
                 to="/area#map"
                 onClick={() => setIsMenuOpen(false)}
-                className="block bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors"
-              >
-                Skip to Map
+                className="block bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors">
+                Xaritaga o‘tish
               </Link>
             </div>
           </motion.div>
