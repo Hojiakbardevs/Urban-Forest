@@ -3,25 +3,31 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Users, Filter, X } from 'lucide-react';
 import TeamMember, { TeamMemberData } from './TeamMember';
 import TeamProfile from './TeamProfile';
-
+import hojiakbar from '/teams/hojiakbar.png';
+import dilmurodov from '/teams/sohibjon.png';
+import abilxanova from '/teams/balausa.png';
+import sulaymonov from '/teams/shahrisabz.png';
+import asadulloh from '/teams/asadulloh.png';
 const teamMembers: TeamMemberData[] = [
   {
     id: '1',
     name: 'Abdulhakimov Hojiakbar',
-    role: 'CTO – Lead Software Engineer',
+    role: 'CTO – Senior Software Engineer',
     position: 'Chief Technology Officer',
     description: 'Designed and implemented the frontend system for urban heat island detection, developed Python backend pipelines, integrated Leaflet with Google Earth Engine.',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+    avatar: hojiakbar,
     technologies: ['React.js', 'Python', 'Leaflet.js', 'Google Earth Engine', 'LANDSAT', 'MODIS'],
     category: 'developer',
-    bio: 'Hojiakbar is a passionate software engineer with expertise in geospatial technologies and environmental data analysis. He leads the technical vision of our urban heat island detection platform, combining cutting-edge web technologies with satellite data processing to create impactful solutions for urban planning.',
+    bio: 'Hojiakbar is a passionate senior software engineer with expertise in geospatial technologies and environmental data analysis. He leads the technical vision of our urban heat island detection platform, combining cutting-edge web technologies with satellite data processing to create impactful solutions for urban planning.',
     contributions: [
-      'Architected the entire frontend system using React.js and Leaflet.js',
-      'Developed robust Python backend pipelines for satellite data processing',
-      'Integrated Google Earth Engine with web-based visualization tools',
-      'Implemented real-time heat island detection algorithms',
-      'Created responsive and interactive mapping interfaces',
-      'Established CI/CD pipelines and deployment strategies'
+      'Yagona frontend arxitekturasini React.js va Leaflet.js asosida ishlab chiqdi',
+      'LANDSAT va MODIS ma’lumotlarini Google Earth Engine orqali integratsiya qildi',
+      'Sun’iy yo‘ldosh tasvirlaridan real vaqtli issiqlik orollari algoritmlarini yaratdi',
+      'CI/CD pipeline’larini (GitHub Actions, Docker) yaratib, doimiy deploy tizimini yo‘lga qo‘ydi',
+      'Interaktiv xaritalash va katmanlar (layers) tizimini ishlab chiqdi',
+      'Mahalliy sensorlar va tashqi API’lar bilan uzluksiz bog‘lovchi backend tizimlarini ishlab chiqdi',
+      'Yuqori darajadagi foydalanuvchi tajribasi uchun caching va responsive dizaynni amalga oshirdi',
+      'Platformaning texnologik yo‘nalishini, standartlar va komponentlar kutubxonasini ishlab chiqdi'
     ],
     references: [
       {
@@ -38,161 +44,146 @@ const teamMembers: TeamMemberData[] = [
       }
     ],
     links: {
-      github: 'https://github.com/hojiakbar',
-      linkedin: 'https://linkedin.com/in/hojiakbar',
+      github: 'https://github.com/hojiakbardevs',
+      linkedin: 'https://linkedin.com/in/hojiakbardev',
       website: 'https://hojiakbar.dev'
     }
   },
   {
     id: '2',
-    name: 'Sarah Chen',
-    role: 'Lead Data Scientist',
-    position: 'Senior Data Scientist',
-    description: 'Specializes in machine learning algorithms for environmental data analysis, develops predictive models for urban heat patterns using satellite imagery and IoT sensor data.',
-    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face',
-    technologies: ['Python', 'Scikit-learn', 'Pandas', 'TensorFlow', 'Jupyter', 'NumPy'],
+    name: 'Dilmurodov Sohibjon',
+    role: 'Data Scientist & Data Engineer',
+    position: 'Senior Data Engineer',
+    description: 'Designs scalable data pipelines and predictive analytics systems, blending data science with engineering to extract insights from satellite and sensor data.',
+    avatar: dilmurodov,
+    technologies: ['Python', 'Airflow', 'Spark', 'Pandas', 'TensorFlow', 'PostgreSQL'],
     category: 'data-scientist',
-    bio: 'Sarah is a data science expert with a PhD in Environmental Engineering. She specializes in applying machine learning to environmental challenges, particularly in urban climate analysis and predictive modeling for sustainable city planning.',
+    bio: 'Sohibjon is a skilled data scientist and data engineer with a focus on scalable pipeline design and predictive modeling. He bridges ML model development with production-level data workflows, especially in environmental and urban data contexts.',
     contributions: [
-      'Developed ML models for heat island prediction with 94% accuracy',
-      'Created automated data pipelines for satellite imagery processing',
-      'Implemented real-time anomaly detection for temperature sensors',
-      'Built statistical models for urban vegetation impact analysis',
-      'Designed A/B testing frameworks for model validation',
-      'Published research on AI-driven urban climate solutions'
+      'Apache Airflow orqali avtomatlashtirilgan ma’lumotlar pipeline’larini yaratdi',
+      'Sun’iy yo‘ldosh ma’lumotlarini oldindan tozalash, normalizatsiya va tahlil qilish jarayonlarini avtomatlashtirdi',
+      'TensorFlow yordamida urban hududlarda issiqlik tarqalishini bashoratlovchi model ishlab chiqdi',
+      'PostgreSQL va S3 kabi xotira tizimlari yordamida samarali ma’lumotlar saqlash infratuzilmasini yaratdi',
+      'Sensorlardan olingan harorat ma’lumotlarini real vaqtli oqim shaklida qayta ishlash tizimini joriy qildi',
+      'Ma’lumotlar ishonchliligini ta’minlash uchun monitoring va alerting tizimlarini ishlab chiqdi'
     ],
     references: [
       {
-        category: 'Data Science',
-        tools: ['Scikit-learn', 'Pandas', 'NumPy', 'TensorFlow']
+        category: 'Data Engineering',
+        tools: ['Apache Airflow', 'Spark', 'PostgreSQL']
       },
       {
-        category: 'Earth Observation',
-        tools: ['Google Earth Engine', 'LANDSAT', 'Sentinel-2']
+        category: 'Machine Learning',
+        tools: ['TensorFlow', 'Scikit-learn', 'Pandas']
       },
       {
-        category: 'Backend',
-        tools: ['Python', 'Jupyter', 'Apache Spark']
+        category: 'Deployment',
+        tools: ['Docker', 'Kubernetes', 'TensorFlow Serving']
       }
     ],
     links: {
-      github: 'https://github.com/sarahchen',
-      linkedin: 'https://linkedin.com/in/sarahchen'
+      github: 'https://github.com/sohibjondev',
+      linkedin: 'https://linkedin.com/in/sohibjondev'
     }
   },
   {
     id: '3',
-    name: 'Marcus Rodriguez',
+    name: 'Abilxanova Balausa',
     role: 'UI/UX Designer',
-    position: 'Senior Product Designer',
-    description: 'Creates intuitive and accessible interfaces for complex geospatial data visualization, focuses on user-centered design for environmental monitoring dashboards.',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-    technologies: ['Figma', 'Adobe XD', 'Sketch', 'Principle', 'Framer', 'Canva'],
+    position: 'Software Engineer – UI/UX',
+    description: 'Blends software engineering with interface design to ensure user-friendly layouts for environmental data dashboards.',
+    avatar: abilxanova,
+    technologies: ['Figma', 'Tailwind CSS', 'React.js'],
     category: 'designer',
-    bio: 'Marcus is a creative designer with over 8 years of experience in product design. He specializes in creating beautiful, functional interfaces for complex data visualization tools, with a particular passion for environmental and sustainability-focused applications.',
+    bio: 'Balausa is a creative software engineer with strong UI/UX skills, specialized in building functional and aesthetically clean interfaces for data-centric applications. A TATU graduate with a focus on front-end interaction.',
     contributions: [
-      'Designed the complete user interface for the heat mapping platform',
-      'Created comprehensive design system and component library',
-      'Conducted user research and usability testing sessions',
-      'Developed interactive prototypes for stakeholder presentations',
-      'Established accessibility guidelines and WCAG compliance',
-      'Led design workshops for cross-functional collaboration'
+      'Urban monitoring tizimlari uchun intuitiv UI dizaynlar ishlab chiqdi',
+      'Figma orqali dizayn sistemasi va komponent kutubxonasini yaratdi',
+      'Tailwind CSS yordamida dizaynlarni tez va barqaror frontend komponentlarga aylantirdi',
+      'Foydalanuvchi fikr-mulohazalarini to‘plash orqali iterativ dizayn jarayonini yo‘lga qo‘ydi',
+      'Frontend jamoasi bilan to‘g‘ridan-to‘g‘ri ishlash orqali dizaynni aniq implementatsiyasini ta’minladi'
     ],
     references: [
       {
         category: 'Design',
-        tools: ['Figma', 'Adobe XD', 'Sketch', 'Principle']
-      },
-      {
-        category: 'Prototyping',
-        tools: ['Framer', 'InVision', 'Marvel', 'Canva']
+        tools: ['Figma', 'Adobe XD', 'Canva']
       },
       {
         category: 'Frontend',
-        tools: ['HTML/CSS', 'JavaScript', 'React.js']
+        tools: ['Tailwind CSS', 'React.js', 'HTML/CSS']
       }
     ],
     links: {
-      github: 'https://github.com/marcusrodriguez',
-      linkedin: 'https://linkedin.com/in/marcusrodriguez',
-      website: 'https://marcusdesigns.com'
+      github: 'https://github.com/balausadev',
+      linkedin: 'https://linkedin.com/in/balausadev'
     }
   },
   {
     id: '4',
-    name: 'Dr. Aisha Patel',
-    role: 'Environmental Research Lead',
-    position: 'Principal Researcher',
-    description: 'PhD in Environmental Science, leads research initiatives on urban climate change, validates heat island detection models against field measurements.',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face',
-    technologies: ['R', 'MATLAB', 'ArcGIS', 'QGIS', 'Python', 'Statistical Analysis'],
-    category: 'data-scientist',
-    bio: 'Dr. Aisha Patel is an environmental scientist with expertise in urban climatology and remote sensing. She brings academic rigor to our research initiatives and ensures our solutions are grounded in solid scientific principles.',
+    name: 'Sulaymonov Shaxrisabz',
+    role: 'Frontend Engineer & Project Manager',
+    position: 'Frontend Lead',
+    description: 'Combines strong frontend development skills with project coordination responsibilities. Focuses on interactive dashboards and team workflow efficiency.',
+    avatar: sulaymonov,
+    technologies: ['HTML', 'CSS', 'React.js', 'Node.js', 'JavaScript'],
+    category: 'developer',
+    bio: 'Shaxrisabz is a third-year student from Nukus State Technical University, specializing in modern frontend development and project leadership. He effectively translates design into interactive web components and ensures timely delivery of project milestones.',
     contributions: [
-      'Led validation studies for heat island detection algorithms',
-      'Established partnerships with academic institutions',
-      'Published peer-reviewed papers on urban climate modeling',
-      'Designed field measurement protocols for ground truth data',
-      'Created scientific methodology for model validation',
-      'Mentored junior researchers and data scientists'
+      'React.js yordamida modulli UI komponentlarini ishlab chiqdi',
+      'Loyihaning kunlik sprintlarini boshqarib, vazifalar bo‘yicha jamoa a’zolarini yo‘naltirdi',
+      'Node.js orqali backend API’larni integratsiya qildi va axios bilan ma’lumot oqimini boshqardi',
+      'Notion va Trello kabi vositalar yordamida loyiha jarayonlarini shaffoflashtirdi',
+      'Frontend jamoasining kod sifati va deadline’lar bajarilishini nazorat qildi'
     ],
     references: [
       {
-        category: 'Research Tools',
-        tools: ['R', 'MATLAB', 'SPSS', 'Origin']
+        category: 'Frontend',
+        tools: ['React.js', 'HTML/CSS', 'JavaScript']
       },
       {
-        category: 'GIS & Remote Sensing',
-        tools: ['ArcGIS', 'QGIS', 'ENVI', 'ERDAS']
-      },
-      {
-        category: 'Data Science',
-        tools: ['Python', 'Pandas', 'SciPy', 'Matplotlib']
+        category: 'Project Management',
+        tools: ['Jira', 'Trello', 'Notion']
       }
     ],
     links: {
-      linkedin: 'https://linkedin.com/in/aishapatel',
-      website: 'https://aishapatel-research.com'
+      github: 'https://github.com/shaxrisabzdev',
+      linkedin: 'https://linkedin.com/in/shaxrisabz'
     }
   },
   {
     id: '5',
-    name: 'James Thompson',
-    role: 'DevOps Engineer',
-    position: 'Senior DevOps Engineer',
-    description: 'Manages cloud infrastructure and deployment pipelines, ensures scalable and reliable systems for processing large-scale satellite data and serving real-time visualizations.',
-    avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face',
-    technologies: ['Docker', 'Kubernetes', 'AWS', 'Terraform', 'Jenkins', 'Monitoring'],
+    name: 'Asadulloh Ravshanov',
+    role: 'Fullstack Engineer',
+    position: 'Fullstack Developer',
+    description: 'Builds and maintains both client-side and server-side systems, ensuring clean UI with robust backend functionality.',
+    avatar: asadulloh,
+    technologies: ['React.js', 'Node.js', 'PostgreSQL', 'Express', 'JavaScript'],
     category: 'developer',
-    bio: 'James is a DevOps expert with extensive experience in cloud infrastructure and automation. He ensures our platform can handle massive datasets and serve thousands of users with high availability and performance.',
+    bio: 'Asadulloh is a fullstack developer with a strong command of end-to-end web development. He ensures seamless data flow between the UI and backend systems, with a focus on performance and maintainability.',
     contributions: [
-      'Architected scalable cloud infrastructure on AWS',
-      'Implemented automated CI/CD pipelines with zero-downtime deployments',
-      'Set up monitoring and alerting systems for 99.9% uptime',
-      'Optimized data processing workflows for satellite imagery',
-      'Established security best practices and compliance protocols',
-      'Reduced infrastructure costs by 40% through optimization'
+      'RESTful API’larni yaratdi va serverda Express orqali marshrutlashni amalga oshirdi',
+      'React.js asosida admin panel va foydalanuvchi interfeyslarini ishlab chiqdi',
+      'PostgreSQL bilan ishlashda samarador so‘rovlar (query optimization)ni ta’minladi',
+      'Backendda foydalanuvchi autentifikatsiyasi va ma’lumot tekshiruvi (validation)ni joriy qildi',
+      'Frontend va backend o‘rtasida to‘liq integratsiyani ta’minladi, testlar yozdi'
     ],
     references: [
       {
-        category: 'Cloud Platforms',
-        tools: ['AWS', 'Google Cloud', 'Azure', 'DigitalOcean']
+        category: 'Frontend',
+        tools: ['React.js', 'HTML/CSS', 'JavaScript']
       },
       {
-        category: 'DevOps Tools',
-        tools: ['Docker', 'Kubernetes', 'Terraform', 'Jenkins']
-      },
-      {
-        category: 'Monitoring',
-        tools: ['Prometheus', 'Grafana', 'ELK Stack', 'DataDog']
+        category: 'Backend',
+        tools: ['Node.js', 'Express', 'PostgreSQL']
       }
     ],
     links: {
-      github: 'https://github.com/jamesthompson',
-      linkedin: 'https://linkedin.com/in/jamesthompson'
+      github: 'https://github.com/asadullohdev',
+      linkedin: 'https://linkedin.com/in/asadullohdev'
     }
   }
 ];
+
 
 const TeamSection: React.FC = () => {
   const [selectedMember, setSelectedMember] = useState<TeamMemberData | null>(null);

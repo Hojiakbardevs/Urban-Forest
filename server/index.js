@@ -1,5 +1,5 @@
-import express from 'express';
-import cors from 'cors';
+import express from "express";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,13 +21,13 @@ const generateMockNDVI = (lat, lng) => {
 };
 
 // API endpoints
-app.get('/api/temperature', (req, res) => {
+app.get("/api/temperature", (req, res) => {
   const { lat, lng } = req.query;
-  
+
   if (!lat || !lng) {
     return res.status(400).json({
       success: false,
-      error: 'Latitude and longitude are required'
+      error: "Latitude and longitude are required",
     });
   }
 
@@ -44,12 +44,12 @@ app.get('/api/temperature', (req, res) => {
       lng: longitude,
       temperature: Math.round(temperature * 10) / 10,
       ndvi: Math.round(ndvi * 100) / 100,
-      timestamp: new Date().toISOString()
-    }
+      timestamp: new Date().toISOString(),
+    },
   });
 });
 
-app.get('/api/planting-zones', (req, res) => {
+app.get("/api/planting-zones", (req, res) => {
   // Generate mock planting zones around Tashkent
   const center = { lat: 41.2995, lng: 69.2401 };
   const zones = [];
@@ -67,54 +67,54 @@ app.get('/api/planting-zones', (req, res) => {
         [lat - 0.002, lng - 0.002],
         [lat - 0.002, lng + 0.002],
         [lat + 0.002, lng + 0.002],
-        [lat + 0.002, lng - 0.002]
+        [lat + 0.002, lng - 0.002],
       ],
       area,
       trees,
       reduction,
-      priority: Math.random() > 0.5 ? 'high' : 'medium'
+      priority: Math.random() > 0.5 ? "high" : "medium",
     });
   }
 
   res.json({
     success: true,
-    data: zones
+    data: zones,
   });
 });
 
-app.get('/api/recommendations', (req, res) => {
+app.get("/api/recommendations", (req, res) => {
   const { lat, lng, temperature } = req.query;
-  
+
   const temp = parseFloat(temperature) || 30;
   let recommendations = [];
 
   if (temp > 35) {
     recommendations = [
-      'Plant large canopy trees (Platanus orientalis, Populus nigra)',
-      'Install shade structures in public areas',
-      'Use light-colored pavement materials',
-      'Create green corridors for air circulation',
-      'Install misting systems in pedestrian areas'
+      "Katta soyali daraxtlar ekish (Platanus orientalis, Populus nigra)",
+      "Jamoat joylariga soyabon konstruksiyalar o‘rnatish",
+      "Yorug‘ rangli yo‘l qoplamalaridan foydalanish",
+      "Havoning aylanishi uchun yashil yo‘laklar yaratish",
+      "Piyodalar hududida tuman purkagich tizimlarini o‘rnatish",
     ];
   } else if (temp > 30) {
     recommendations = [
-      'Plant medium-sized shade trees (Acer platanoides, Tilia cordata)',
-      'Increase green roof coverage',
-      'Add vegetation to parking areas',
-      'Create pocket parks in dense areas'
+      "O‘rtacha o‘lchamdagi soyali daraxtlar ekish (Acer platanoides, Tilia cordata)",
+      "Yashil tom qoplamalarini kengaytirish",
+      "Avtoturargoh joylariga o‘simliklar qo‘shish",
+      "Zich joylarda kichik bog‘lar (pocket park) tashkil etish",
     ];
   } else if (temp > 25) {
     recommendations = [
-      'Plant mixed native vegetation',
-      'Maintain existing tree canopy',
-      'Add ornamental plants for aesthetics',
-      'Consider permeable pavement'
+      "Aralash mahalliy o‘simliklarni ekish",
+      "Mavjud daraxt soyasini saqlab qolish",
+      "Estetik ko‘rinish uchun manzarali o‘simliklar qo‘shish",
+      "Suvni o‘tkazadigan yo‘l qoplamasini ko‘rib chiqish",
     ];
   } else {
     recommendations = [
-      'Maintain current vegetation levels',
-      'Focus on biodiversity enhancement',
-      'Plant flowering species for pollinators'
+      "Mavjud vegetatsiya darajasini saqlab qolish",
+      "Biologik xilma-xillikni oshirishga e’tibor qaratish",
+      "Changlatuvchilar uchun gullaydigan o‘simliklar ekish",
     ];
   }
 
@@ -122,13 +122,13 @@ app.get('/api/recommendations', (req, res) => {
     success: true,
     data: {
       recommendations,
-      urgency: temp > 35 ? 'high' : temp > 30 ? 'medium' : 'low',
-      estimatedCooling: temp > 35 ? '3-5°C' : temp > 30 ? '2-4°C' : '1-2°C'
-    }
+      urgency: temp > 35 ? "high" : temp > 30 ? "medium" : "low",
+      estimatedCooling: temp > 35 ? "3-5°C" : temp > 30 ? "2-4°C" : "1-2°C",
+    },
   });
 });
 
-app.get('/api/stats', (req, res) => {
+app.get("/api/stats", (req, res) => {
   res.json({
     success: true,
     data: {
@@ -136,11 +136,11 @@ app.get('/api/stats', (req, res) => {
       totalPlantingZones: 142,
       recommendedTrees: 1847,
       potentialCooling: 3.2,
-      lastUpdated: new Date().toISOString()
-    }
+      lastUpdated: new Date().toISOString(),
+    },
   });
 });
 
 app.listen(PORT, () => {
-  console.log(`HeatMap AI API server running on port ${PORT}`);
+  console.log(`HeatMap AI API server yuqlanish jarayonida kuting.... ${PORT}`);
 });
