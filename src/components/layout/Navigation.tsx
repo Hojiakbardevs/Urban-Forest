@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { TreePine, Menu, X, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import icoin from "/stock.png"; // Adjust the path as necessary
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,6 +64,7 @@ const Navigation: React.FC = () => {
               <MapPin className="w-4 h-4" />
               <span>Xaritaga o‘tish</span>
             </Link>
+            <img src={icoin} alt="icoin" className="w-10" />
           </div>
 
           {/* Mobile Menu Button */}

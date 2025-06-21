@@ -61,7 +61,7 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
       {/* Growth Visualization */}
       <div className="bg-white/50 rounded-lg p-3 border border-gray-200">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-gray-700">Growth Progress</span>
+          <span className="text-sm font-medium text-gray-700">Rivojlanish Jarayonida</span>
           <span className="text-sm text-green-600 font-semibold">
             {currentGrowth.coveragePercent.toFixed(0)}%
           </span>

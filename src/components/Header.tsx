@@ -14,7 +14,7 @@ const Header: React.FC = () => {
             <div className="hidden md:flex items-center space-x-4 text-gray-600">
               <div className="flex items-center space-x-1">
                 <Thermometer className="w-4 h-4" />
-                <span className="text-sm">Urban Heat Analysis</span>
+                <span className="text-sm">HeatMap Ai Visualizer</span>
               </div>
               <div className="flex items-center space-x-1">
                 <TreePine className="w-4 h-4" />

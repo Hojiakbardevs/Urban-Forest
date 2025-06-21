@@ -1,5 +1,5 @@
-import React from 'react';
-import { Pencil, Eye, EyeOff, MapPin, TreePine } from 'lucide-react';
+import React from "react";
+import { Pencil, Eye, EyeOff, MapPin, TreePine } from "lucide-react";
 
 interface DrawingControlsProps {
   onTogglePredefinedZones: () => void;
@@ -10,7 +10,7 @@ interface DrawingControlsProps {
 const DrawingControls: React.FC<DrawingControlsProps> = ({
   onTogglePredefinedZones,
   showPredefinedZones,
-  drawnPolygonsCount
+  drawnPolygonsCount,
 }) => {
   return (
     <div className="space-y-4">
@@ -23,7 +23,9 @@ const DrawingControls: React.FC<DrawingControlsProps> = ({
       <div className="bg-blue-50 rounded-lg p-3">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm font-medium text-blue-900">Drawn Areas</span>
-          <span className="text-lg font-bold text-blue-600">{drawnPolygonsCount}</span>
+          <span className="text-lg font-bold text-blue-600">
+            {drawnPolygonsCount}
+          </span>
         </div>
         <p className="text-xs text-blue-700">
           Use the polygon tool on the map to draw planting areas
@@ -35,17 +37,22 @@ const DrawingControls: React.FC<DrawingControlsProps> = ({
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <MapPin className="w-4 h-4 text-orange-500" />
-            <span className="text-sm font-medium text-gray-700">Predefined Zones</span>
+            <span className="text-sm font-medium text-gray-700">
+              Predefined Zones
+            </span>
           </div>
           <button
             onClick={onTogglePredefinedZones}
             className={`p-1 rounded transition-colors ${
               showPredefinedZones
-                ? 'text-orange-600 hover:bg-orange-50'
-                : 'text-gray-400 hover:bg-gray-50'
-            }`}
-          >
-            {showPredefinedZones ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
+                ? "text-orange-600 hover:bg-orange-50"
+                : "text-gray-400 hover:bg-gray-50"
+            }`}>
+            {showPredefinedZones ? (
+              <Eye className="w-4 h-4" />
+            ) : (
+              <EyeOff className="w-4 h-4" />
+            )}
           </button>
         </div>
 
@@ -71,13 +78,15 @@ const DrawingControls: React.FC<DrawingControlsProps> = ({
       <div className="bg-green-50 rounded-lg p-3">
         <div className="flex items-center space-x-2 mb-2">
           <TreePine className="w-4 h-4 text-green-600" />
-          <span className="text-sm font-medium text-green-900">Planting Benefits</span>
+          <span className="text-sm font-medium text-green-900">
+            Ekish Foydalari
+          </span>
         </div>
         <div className="space-y-1 text-xs text-green-700">
-          <p>• 1 tree per 25m² optimal density</p>
-          <p>• 2-4°C temperature reduction</p>
-          <p>• Improved air quality & biodiversity</p>
-          <p>• Enhanced property values</p>
+          <p>• 25m² maydonga 1 ta daraxt optimal zichlik</p>
+          <p>• 2-4°C haroratni pasaytiradi</p>
+          <p>• Havo sifati va biologik xilma-xillik yaxshilanadi</p>
+          <p>• Ko‘chmas mulk qiymati oshadi</p>
         </div>
       </div>
     </div>
