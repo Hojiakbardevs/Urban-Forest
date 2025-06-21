@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "TAS-GREEN-04",
+        "name_uz": "Amir Temur maydoni atrofidagi yashil hudud",
+        "priority": "yuqori",
+        "suggestion": "Ko‘k pyapata (Acer negundo) va xizmat shoyi daraxtlari",
+        "highlight_color": "#D91EF0",
+        "outline_color": "#000000",
+        "outline_width": 2,
+        "area": 10000,
+        "existing_trees": 30,
+        "soil_type": "qumloy",
+        "water_access": "shahar tarmog‘i"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[69.2795, 41.3111], [69.2810, 41.3111], [69.2810, 41.3125], [69.2795, 41.3125], [69.2795, 41.3111]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "TAS-GREEN-05",
+        "name_uz": "Yangi O‘zbekiston bog‘i",
+        "priority": "yuqori",
+        "suggestion": "Kadimiy bodom (Amygdalus communis) va limon daraxtlari bilan bezash",
+        "highlight_color": "#D91EF0",
+        "outline_color": "#000000",
+        "outline_width": 2,
+        "area": 1040000,
+        "existing_trees": 5000,
+        "soil_type": "unumdor loy",
+        "water_access": "sug‘orish"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[69.3500, 41.3200], [69.3600, 41.3200], [69.3600, 41.3300], [69.3500, 41.3300], [69.3500, 41.3200]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "TAS-GREEN-06",
+        "name_uz": "Tashkent City bog‘i",
+        "priority": "o‘rtacha",
+        "suggestion": "Katta gullar (Magnolia grandiflora) va ko‘k choy daraxtlari",
+        "highlight_color": "#D91EF0",
+        "outline_color": "#000000",
+        "outline_width": 2,
+        "area": 186800,
+        "existing_trees": 4500,
+        "soil_type": "unumdor loy",
+        "water_access": "sug‘orish"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[69.2100, 41.3000], [69.2260, 41.3000], [69.2260, 41.3180], [69.2100, 41.3180], [69.2100, 41.3000]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_id": "TAS-GREEN-07",
+        "name_uz": "Toshkent botanika bog‘i",
+        "priority": "yuqori",
+        "suggestion": "Mahalliy yovvoyi o‘simliklar va farmatsevtik daraxtlar turlari",
+        "highlight_color": "#D91EF0",
+        "outline_color": "#000000",
+        "outline_width": 2,
+        "area": 654000,
+        "existing_trees": 10000,
+        "soil_type": "loyli qum",
+        "water_access": "tabiiy"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[69.2400, 41.3300], [69.2550, 41.3300], [69.2550, 41.3450], [69.2400, 41.3450], [69.2400, 41.3300]]]
+      }
+    }
+  ]
+}
